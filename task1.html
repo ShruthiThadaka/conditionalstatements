@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h4>TASK:
+        1. Income Tax Calculation Based on Income Slabs
+        
+        Problem:
+        Write a program to calculate income tax based on the following slabs:
+        
+        Income <= 2,50,000: No tax
+        
+        Income > 2,50,000 and <= 5,00,000: 5% of the amount exceeding 2,50,000
+        
+        Income > 5,00,000 and <= 10,00,000: 12,500 + 20% of the amount exceeding 5,00,000
+        
+        Income > 10,00,000: 1,12,500 + 30% of the amount exceeding 10,00,000
+        </h4>
+    <script>
+        var income = parseInt(prompt("Enter the income:"));
+        if (income <= 250000) {
+            console.log("No tax");
+        }
+        else if (income > 250000 && income <= 500000) {
+            console.log("Tax = ", (5 / 100) * income);
+        }
+        else if (income > 500000 && income <= 1000000) {
+            tax = 12500 +  (20 / 100) * income;
+            console.log(`Total tax = ${tax}`);
+        }
+        else if(income > 1000000){
+            tax = 112500 + (30/100*income) ;
+            console.log(`Total tax = ${tax}`);
+        }
+        else{
+            console.log("Please enter the income")
+        }
+    </script>
+</body>
+
+</html>

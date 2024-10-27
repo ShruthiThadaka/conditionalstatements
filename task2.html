@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h4>2. Shipping Cost Based on Weight and Destination
+
+        Problem:
+        Write a program that calculates the shipping cost for a parcel based on its weight and destination:
+
+        Weight <= 1kg: Local: $5 National: $8 International: $15 Weight> 1kg and <= 5kg: Local: $10 National: $15
+                International: $30 Weight> 5kg and <= 10kg: Local: $20 National: $25 International: $50 Weight> 10kg:
+
+                    Local: $30
+
+                    National: $35
+
+                    International: $70
+
+
+
+                    Requirements:
+
+                    Input: Two variables for weight and destination
+
+                    Output: The total shipping cost
+
+
+    </h4>
+
+    <script>
+        var weight = parseInt(prompt("Enter the weight in kgs:"));
+        if (weight < 0) {
+            console.log("Enter weight > 0")
+        }
+        var destination = prompt("Enter the destination:");
+        if (weight <= 1) {
+            if (destination == "Local") {
+                console.log("The shipping cost is $5");
+            }
+            else if (destination == "National") {
+                console.log("The shipping cost is $8");
+            }
+            else {
+                console.log("the shipping cost is$15")
+            }
+        }
+        else if (weight > 1 && weight <= 5) {
+            if (destination == "Local") {
+                console.log("The shipping cost is $10");
+            }
+            else if (destination == "National") {
+                console.log("The shhipping cost is $15");
+            }
+            else {
+                console.log("The shipping cost is $30")
+            }
+        }
+        else if (weight > 5 && weight <= 10) {
+            if (destination == "Local") {
+                console.log("The shipping cost is $20");
+            }
+            else if (destination == "National") {
+                console.log("The shipping cost is $25");
+            }
+            else {
+                console.log("The shipping cost is $50")
+            }
+        }
+        else if (weight > 10) {
+            if (destination == "Local") {
+                console.log("The shipping cost is $30");
+            }
+            else if (destination == "National") {
+                console.log("The shipping cost is $35");
+            }
+            else {
+                console.log("The shipping cost is $70")
+            }
+        }
+        else {
+            console.log("invalid input")
+        }
+    </script>
+</body>
+
+</html>
